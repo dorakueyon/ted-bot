@@ -16,6 +16,7 @@ module.exports = (robot) ->
         "なにまんもす！",
         "へ！",
         "え！",
+        "よんだかな！",
         "なにかな！"
     ]
 
@@ -27,3 +28,8 @@ module.exports = (robot) ->
 module.exports = (robot) ->
   robot.hear /ぷんぷん/i, (msg) ->
     msg.send "ぷんぷん！すかぷん！"
+
+
+module.exports = (robot) ->
+  robot.hear /おはよう/i, (msg) ->
+    msg.send "おはよう！"
