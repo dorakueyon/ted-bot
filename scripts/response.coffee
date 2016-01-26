@@ -1,12 +1,10 @@
 module.exports = (robot) ->
-  robot.hear /ted/i, (msg) ->
-    msg.send "なにかな！"
 
   robot.hear /おなかす/i, (msg) ->
     msg.send "Yoheiにつくってもらえば！Y's Kitchen!"
 
 
-  robot.hear /@ted/, (msg) ->
+  robot.hear /ted/i, (msg) ->
     msg.send msg.random [
         "ー",
         "！！",
