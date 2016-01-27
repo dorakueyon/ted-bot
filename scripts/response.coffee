@@ -33,6 +33,10 @@ module.exports = (robot) ->
   robot.hear /ー/, (msg) ->
     msg.send "ー"
 
+  robot.hear /ほっし/i, (msg) ->
+    url = "https://goo.gl/photos/ppbLg7Vk8F8sK9bE6"
+    msg.send url
+
   robot.respond /帰国/i, (msg) ->
     current_date = new Date
     return_date = d = new Date("2016-02-07 13:00:00.500")
