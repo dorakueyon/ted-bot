@@ -21,6 +21,8 @@ module.exports = (robot) ->
   robot.hear /ルル/i, (msg) ->
     msg.send "-"
 
+  robot.hear /ー/, (msg) ->
+    msg.send "ー"
 
   robot.hear /ぷんぷん/i, (msg) ->
     msg.send "ぷんぷん！すかぷん！"
@@ -32,13 +34,15 @@ module.exports = (robot) ->
       "おやすみまんもす！"
     ]
   robot.hear /おはよう/i, (msg) ->
-    msg.send "おはよう！"
+    msg.send msg.random [
+      "おはよう！",
+      "おきた！",
+      "おはようございましゅ！す！",
+    ]
+
 
   robot.hear /朝だね/i, (msg) ->
     msg.send "希望の朝！"
-
-  robot.hear /ー/, (msg) ->
-    msg.send "ー"
 
   robot.hear /ほっし/i, (msg) ->
     url = "https://goo.gl/photos/ppbLg7Vk8F8sK9bE6"
@@ -49,6 +53,15 @@ module.exports = (robot) ->
 
   robot.hear /おいし/i, (msg) ->
     msg.send "僕もたべたい！"
+
+  robot.hear /ぺろぺろ/i, (msg) ->
+    msg.send "僕をなめると毛がつくよ！"
+
+  robot.hear /ペロペロ/i, (msg) ->
+    msg.send "僕をなめると毛がつくよ！"
+
+  robot.hear /じゅる/i, (msg) ->
+    msg.reply "はいティッシュ！"
 
   robot.respond /帰国/i, (msg) ->
     current_date = new Date
