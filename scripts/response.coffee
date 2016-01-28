@@ -1,8 +1,10 @@
 module.exports = (robot) ->
 
   robot.hear /おなかす/i, (msg) ->
-    msg.send "Yoheiにつくってもらえば！Y's Kitchen!"
-
+    msg.send msg.random [
+        "Yoheiにつくってもらえば！",
+        "Y's Kitchen!"
+    ]
 
   robot.hear /ted/i, (msg) ->
     msg.send msg.random [
@@ -23,7 +25,12 @@ module.exports = (robot) ->
   robot.hear /ぷんぷん/i, (msg) ->
     msg.send "ぷんぷん！すかぷん！"
 
-
+  robot.hear /おやすみ/i, (msg) ->
+    msg.send msg.random [
+      "はいおやすみなさい！",
+      "おやすみ！",
+      "おやすみまんもす！"
+    ]
   robot.hear /おはよう/i, (msg) ->
     msg.send "おはよう！"
 
@@ -36,6 +43,9 @@ module.exports = (robot) ->
   robot.hear /ほっし/i, (msg) ->
     url = "https://goo.gl/photos/ppbLg7Vk8F8sK9bE6"
     msg.send url
+
+  robot.hear /美味し/i, (msg) ->
+    msg.send "僕も食べたい！"
 
   robot.respond /帰国/i, (msg) ->
     current_date = new Date
