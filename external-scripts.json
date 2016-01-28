@@ -6,7 +6,7 @@
   "hubot-google-images",
   "hubot-google-translate",
   "hubot-pugme",
-  "hubot-twitter-search",
+  /*"hubot-twitter-search",*/
   "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
