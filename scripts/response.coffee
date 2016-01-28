@@ -47,6 +47,9 @@ module.exports = (robot) ->
   robot.hear /美味し/i, (msg) ->
     msg.send "僕も食べたい！"
 
+  robot.hear /おいし/i, (msg) ->
+    msg.send "僕もたべたい！"
+
   robot.respond /帰国/i, (msg) ->
     current_date = new Date
     return_date = d = new Date("2016-02-07 13:00:00.500")
